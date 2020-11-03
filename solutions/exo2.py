@@ -25,4 +25,5 @@ def evaluate(dataloader):
             total_loss += loss.detach().cpu().numpy() * len(label)  # by default, pytorch averages loss over batch
             total_accuracy += accuracy.detach().cpu().numpy()
 
+            
     return total_loss / num_samples, total_accuracy / num_samples
